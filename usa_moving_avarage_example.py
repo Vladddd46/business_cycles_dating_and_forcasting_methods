@@ -1,5 +1,6 @@
 import json
 from forcasting_methods_for_business_cycles import moving_average
+from buildgraph import build_2graphs
 
 """
 Example of forcasting ukrainian gdp using moving_average forcast method.
@@ -38,3 +39,5 @@ for i in forcast:
 print("Середнє значення Різниці% = ", round(sum_diff_in_percent/len(forcast)), "%")
 print("Максимальне значення Різниці%", max_diff_in_percent, "%")
 print("Мінімальне значення Різниці%", min_diff_in_percent, "%")
+
+build_2graphs(data, forcast, title='USA moving avarage GDP forcast, 2010-2020', xlable_name='Quarter')
